@@ -1,0 +1,11 @@
+{
+  "name": "fe-interview",
+  "version": "1.0.0",
+  "description": "front end interview",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
