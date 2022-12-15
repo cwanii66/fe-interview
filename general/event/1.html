@@ -1,0 +1,22 @@
+<body>
+  <ul id="ul">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ul>
+</body>
+<script>
+  const ul = document.querySelector('#ul')
+  ul.addEventListener('click', function(e) {
+    const target = e.target
+    if (target.tagName.toLowerCase() === 'li') {
+      const liList = this.querySelectorAll('li')
+      const index = Array.from(liList).indexOf(target)
+      // const index = Array.prototype.indexOf.call(liList, target)
+      alert(`content: ${target.innerHTML}; index: ${index}`)
+    }
+  }, false) // 事件通过冒泡委托给父元素
+</script>
