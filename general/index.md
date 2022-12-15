@@ -58,4 +58,16 @@
     - 事件委托
 
 #### 防抖和节流
-  
+  1. 基本概念
+    - throttle 节流
+      > limiting execution of handlers on events like resize and scroll. 一定时间段内只执行一次
+    - debounce 防抖
+      >  if you keep asking him your requests will be ignored until you stop and give him some time to think about your latest inquiry. 后延请求
+  2. 分别适用于什么场景
+    - 节流：
+      - resize scroll
+    - 防抖：
+      - input
+  3. 手写下节流和防抖函数
+    
+
