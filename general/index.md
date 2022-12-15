@@ -27,4 +27,28 @@
       - `Object.observe`
     - 为什么要引入微任务的概念，只有宏任务可以吗？
       - 宏任务 => 常规的FIFO执行流程
+    - Node中的事件循环和浏览器中的时间循环有什么区别？
+      - 宏任务执行顺序：
+        1. timer 定时器： 执行已经安排的setTimeout和setInterval的回调函数
+        2. pending callback 待定回调：执行延迟到下一个循环迭代的I/O回调
+        3. idle, prepare：仅系统内部使用。
+        4. poll：检索新的I/O事件，执行与I/O相关的回调
+        5. check：执行`setImmediate()`回调函数
+        6. close callback：`socket.on('close', () => {})`
+      - 微任务和宏任务在node的执行顺序
+        > 区别于node的版本，以node v10为界限
+        - Node v10
+          1. 执行完一个阶段中的所有任务
+          2. 执行nextTick队列的内容
+          3. 执行完微任务的内容
+        - Node latest
+          - 和浏览器的行为统一了
+            > 先执行上层宏任务，查找微任务
+              > 一个宏任务 + 多个微任务就可一看做一组轮询
+      - **面试题**
+        - 执行顺序问题 `./event-loop/1.js`
+
+        
+
+      
     
