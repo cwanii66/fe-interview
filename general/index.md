@@ -75,3 +75,27 @@
   - `Promise.all()`你知道有什么特性吗？
   - `Promise.race()`
   - `Promise.allSettled()`
+  - promise 缓存
+
+
+#### HTTP请求相关
+  1. 平时怎么解决跨域问题的
+    - jsonp
+    - cors
+    - node 正向代理，/api -> 同域的node服务器 -> /api -> 返回给前端
+    - nginx 反向代理， proxy_pass
+  2. 有做过全局的请求处理吗？比如统一处理登录态？统一处理全局错误？
+    - axios
+      - adapter
+      - intercepter
+  3. 代码题，你能给xhr添加hooks，是现在各个阶段打日志吗？
+    ```
+    new XMLHTTPRequest()
+    open
+    onreadystatechange
+    onload
+    onerror
+    ...
+    需要监听xhr的各个阶段
+    ```
+  
