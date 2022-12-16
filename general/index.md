@@ -60,14 +60,18 @@
 #### 防抖和节流
   1. 基本概念
     - throttle 节流
-      > limiting execution of handlers on events like resize and scroll. 一定时间段内只执行一次
+      > limiting execution of handlers on events like resize and scroll. 一定时间段内只执行一次。
     - debounce 防抖
-      >  if you keep asking him your requests will be ignored until you stop and give him some time to think about your latest inquiry. 后延请求
+      >  if you keep asking him your requests will be ignored until you stop and give him some time to think about your latest inquiry. 在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时。
   2. 分别适用于什么场景
     - 节流：
       - resize scroll
     - 防抖：
       - input
   3. 手写下节流和防抖函数
-    
 
+#### 你了解promise吗？平时用的多吗？
+
+  - `Promise.all()`你知道有什么特性吗？
+  - `Promise.race()`
+  - `Promise.allSettled()`

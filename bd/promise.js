@@ -8,7 +8,7 @@ function promiseAll(array) {
     array.forEach((value, index) => {
       Promise.resolve(value)
         .then((v) => {
-          result.push(v)
+          result.push(v) // 使用push会产生promise顺序问题
           if (index === array.length - 1) return resolve(result)
         })
         .catch((r) => {

@@ -13,7 +13,7 @@ function debounce(func, delay) {
   }
 }
 
-const debouncedAjax = debounce(ajax, 1000)
+const debouncedAjax = debounce(ajax, 500)
 debouncedAjax('chriswong')
 debouncedAjax('chriswong')
 debouncedAjax('chriswong')
